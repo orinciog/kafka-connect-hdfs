@@ -53,7 +53,7 @@ public class ParquetRecordWriterProvider
       final String filename
   ) {
     return new io.confluent.connect.storage.format.RecordWriter() {
-      final CompressionCodecName compressionCodecName = CompressionCodecName.SNAPPY;
+      final CompressionCodecName compressionCodecName = conf.parquetCompressionCodecName();
       final int blockSize = 256 * 1024 * 1024;
       final int pageSize = 64 * 1024;
       final Path path = new Path(filename);

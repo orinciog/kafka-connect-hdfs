@@ -1,0 +1,5 @@
+1) Apply patch.diff
+	!This will modify also pom.xml
+2) Run: 
+	mvn install
+	mvn package -Dmaven.test.skip=true -Dcheckstyle.skip
